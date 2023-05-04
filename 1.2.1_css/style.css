@@ -2,12 +2,12 @@
 h1 {
     color: blue;
 }
-
 /* CLASE - CLASS */
 .titulo {
     color: crimson;
 }
 
+/* IDENTIFICADOR - ID */
 .fondo-de-bikini {
     background-color: aquamarine;
 }
