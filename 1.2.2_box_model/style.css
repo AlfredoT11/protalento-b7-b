@@ -1,0 +1,69 @@
+#titulo{
+    border: blue 10px solid;
+    padding: 0px 20px 20px 40px;
+    background: orange;
+    color: white;
+}
+
+#subtitulo{
+    border: pink 5px dashed;
+    padding-left: 250px;
+    margin-top: 300px;
+}
+
+.centrado{
+    border: green 2px dotted;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.inlineToBlock{
+    display: block;
+}
+
+#contenedorPruebaPosition{
+    border: green 5px solid;
+    width: 1000px;
+    height: 1500px;
+}
+
+.divEstatico{
+    position: static;
+    border: red 5px solid;
+    background: orange;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+#divRelativo{
+    position: relative;
+    border: red 5px solid;
+    background: green;
+    top: 30px;
+    left: 150px;
+    width: 100px;
+    height: 100px;
+}
+
+#divAbsoluto{
+    position: absolute;
+    border: red 5px solid;
+    background: blue;
+    left: 500px;
+    width: 100px;
+    height: 100px;
+}
+
+#divSticky{
+    position: sticky;
+    border: red 5px solid;
+    background: black;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
