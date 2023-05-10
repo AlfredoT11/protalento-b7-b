@@ -1,0 +1,25 @@
+body {
+    background-color: darksalmon;
+}
+
+.contenedor_flex{
+    display: flex;
+    padding: 20px 10px;
+    border: 10px solid red;
+    background-color: blueviolet;
+}
+
+.items_flex {
+    padding: 10px;
+    background-color: crimson;
+    border: 5px solid white;
+    color: aliceblue;
+}
+
+.flex_direction_column {
+    flex-direction: column;
+}
+
+.flex_direction_row {
+    flex-direction: row;
+}
