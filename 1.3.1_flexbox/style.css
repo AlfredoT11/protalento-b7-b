@@ -2,18 +2,25 @@ body {
     background-color: darksalmon;
 }
 
+section {
+    height: 240px;
+}
+
 .contenedor_flex{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 20px 10px;
     border: 10px solid red;
     background-color: blueviolet;
 }
 
 .items_flex {
-    padding: 10px;
+    padding: 10px 90px;
     background-color: crimson;
     border: 5px solid white;
     color: aliceblue;
+    text-align: center;
 }
 
 .flex_direction_column {
@@ -22,4 +29,16 @@ body {
 
 .flex_direction_row {
     flex-direction: row;
+}
+
+.order_10 {
+    order: 10;
+}
+
+.order_1{
+    order: 1;
+}
+
+.cv {
+    justify-content: space-around;
 }
