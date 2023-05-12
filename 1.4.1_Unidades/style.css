@@ -17,3 +17,19 @@
 .divPorcentaje{
     width: 50%;
 }
+
+html{
+    font-size: 20px;
+}
+
+.tamanio-em{
+    font-size: 24px;
+}
+
+.hijoEM{
+    font-size: 2em;
+}
+
+.hijoREM{
+    font-size: 0.5rem;
+}
