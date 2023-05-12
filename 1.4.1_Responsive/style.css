@@ -1,7 +1,3 @@
-.margenDiv{
-    border: 5px green solid;
-}
-
 .divAltura{
     height: 50px;
 }
@@ -9,55 +5,24 @@
 
 @media screen and (max-width: 2000px){
     .divAncho{
-        width: 40%
+        width: 45%
     }
     .divInline{
         display: inline-block;
+    }
+    .margenDiv{
+        border: 5px blue solid;
     }
 }
 
 @media screen and (max-width: 512px){
     .divAncho{
-        width: 80%
+        width: 100%
     }
     .divInline{
         display: block;
     }
-}
-
-
-.divPixeles{
-    width: 100px;
-}
-
-.div-cm{
-    width: 30cm;
-}
-
-.divPorcentaje{
-    width: 50%;
-}
-
-html{
-    font-size: 16px;
-}
-
-.tamanio-em{
-    font-size: 24px;
-}
-
-.hijoEM{
-    font-size: 2em;
-}
-
-.hijoREM{
-    font-size: 0.5rem;
-}
-
-.divMarginEM{
-    margin-top: 2em;
-}
-
-.divVW{
-    width: 40vh;
+    .margenDiv{
+        border: 5px red solid;
+    }
 }
