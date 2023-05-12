@@ -19,7 +19,7 @@
 }
 
 html{
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .tamanio-em{
@@ -32,4 +32,12 @@ html{
 
 .hijoREM{
     font-size: 0.5rem;
+}
+
+.divMarginEM{
+    margin-top: 2em;
+}
+
+.divVW{
+    width: 40vh;
 }
