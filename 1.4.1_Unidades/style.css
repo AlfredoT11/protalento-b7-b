@@ -9,3 +9,11 @@
 .divPixeles{
     width: 100px;
 }
+
+.div-cm{
+    width: 30cm;
+}
+
+.divPorcentaje{
+    width: 50%;
+}
