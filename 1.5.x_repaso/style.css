@@ -1,0 +1,4 @@
+/* con "*" podemos cambiar las propiedades globales del css, osea, aplica para toda la página */
+* {
+    font-family: 'Roboto Mono', monospace;
+}
