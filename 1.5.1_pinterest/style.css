@@ -1,0 +1,15 @@
+
+
+#navbar-pinterest{
+    top: 0;
+    position: sticky;
+}
+
+.card-image:hover{
+    border: 5px solid black;
+}
+
+.card-image {
+    /* Esto fue para que mi div se acomodara al tamaño de su contenido, hasta este punto era la imagen*/
+    display: inline-block;
+}
