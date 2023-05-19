@@ -1,4 +1,27 @@
 /* con "*" podemos cambiar las propiedades globales del css, osea, aplica para toda la página */
 * {
     font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    /*height: 5vh;  esto no se pudo-> 10%; */
+    /* Flex */
+    width: 70%;
+    background-color: blue;
+    margin-top: 2vh;
+}
+
+#main {
+    height: 90vh; /* esto no se pudo-> 90%; */
+    width: auto;
+    background-color: red;
+}
+
+article {
+    /* podemos quitar el display 
+    display: inline-block; */
+    
+    background-color: pink;
 }
