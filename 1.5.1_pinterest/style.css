@@ -3,6 +3,8 @@
 #navbar-pinterest{
     top: 0;
     position: sticky;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card-image:hover{
@@ -12,4 +14,38 @@
 .card-image {
     /* Esto fue para que mi div se acomodara al tamaño de su contenido, hasta este punto era la imagen*/
     display: inline-block;
+    width: 236px;
+    height: auto;
+
+
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.prueba {
+    position: absolute;
+    z-index: 5;
+}
+
+.finder {
+    width: 20rem;
+    border: none;
+}
+
+.buscador {
+    display: flex;
+    border: 5px solid black;
+    border-radius: 25% 30% 21% 17%;
+    padding: 5px 37px;
+}
+
+
+
+.lupa{
+    width: 1.5rem;
+    height: auto;
+    margin: 5px 1px 1px 1px;
 }
