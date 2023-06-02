@@ -67,3 +67,16 @@ restar(5);
 multiplicar(2.5);
 
 console.log(`El resultado final es: ${resultado}`);
+
+function padre3(){
+
+    let x = 10;
+
+    function hija3(){
+        x += 5;
+        return x;
+    }
+    hija3();
+    return x;
+}
+
