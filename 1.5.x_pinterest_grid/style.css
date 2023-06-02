@@ -1,0 +1,31 @@
+#grid-images{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-auto-rows: auto;
+    column-gap: 25px;
+}
+
+.grid-one{
+    grid-column: 1;
+}
+
+.grid-two{
+    grid-column: 2;
+}
+
+.grid-three{
+    grid-column: 3;
+}
+
+.grid-four{
+    grid-column: 4;
+}
+
+.grid-five{
+    grid-column: 5;
+}
+
+.image-mod{
+    width: 236px;
+    height: auto;
+}
