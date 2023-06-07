@@ -14,14 +14,7 @@ function mostrarMensaje(){
     
 }
 
-function cambiarAAzul(){
-    let h1Titulo = document.getElementById("miTitulo");
-    let valorClase = h1Titulo.getAttribute("class");
-    if(valorClase == "textoVerde"){
-        h1Titulo.setAttribute("class", "textoAzul");
-    }
-}
-
+// Operación de creación.
 function crearImagen(){
     let divPadre = document.getElementById("contenedorImagenes");
     let nuevoNodoImagen = document.createElement("img");
@@ -29,6 +22,7 @@ function crearImagen(){
     divPadre.appendChild(nuevoNodoImagen);
 }
 
+// Operación de eliminación.
 function eliminarImagenes(){
     let imagenes = document.getElementsByTagName("img");
     console.log(imagenes);
@@ -40,6 +34,15 @@ function eliminarImagenes(){
     let bodyNode = document.getElementById("body");
     let titulo = document.getElementById("miTitulo");
     bodyNode.removeChild(titulo);
+}
+
+//Operación de modificación.
+function cambiarAAzul(){
+    let h1Titulo = document.getElementById("miTitulo");
+    let valorClase = h1Titulo.getAttribute("class");
+    if(valorClase == "textoVerde"){
+        h1Titulo.setAttribute("class", "textoAzul");
+    }
 }
 
 console.log("");
