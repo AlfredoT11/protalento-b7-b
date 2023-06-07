@@ -36,6 +36,10 @@ function eliminarImagenes(){
     for(let i=0; i < numeroImagenes; i++){
         imagenes[0].remove();
     }
+
+    let bodyNode = document.getElementById("body");
+    let titulo = document.getElementById("miTitulo");
+    bodyNode.removeChild(titulo);
 }
 
 console.log("");
