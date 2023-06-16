@@ -31,3 +31,8 @@ let perro = new Animal("Perro", 4, "Cafe", false, "Carnívoro", "woooof");
 
 perro.comer(1);
 perro.comunicarse();
+
+
+console.log(`Mi animal es: ${perro.tipoDieta}`);
+perro.tipoDieta = 'Hervíboro';
+console.log(`Mi animal es: ${perro.tipoDieta}`);
