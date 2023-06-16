@@ -53,3 +53,28 @@ perro.tipoDieta = 'Hervíboro';
 console.log(`Mi animal es: ${perro.tipoDieta}`);
 
 console.log(`Mi animal ${perro.raza} es ${perro.comportamiento.comportamientoPersonas} con las personas`);
+
+let perroLiteral = {
+    raza: "perro",
+    numPatas: 4,
+    tipoDieta: "carnívoro",
+    comportamiento: {
+        comportamientoAnimales: "miedoso",
+        comportamientoPersonas: "amistoso"
+    }
+}
+
+let perroLiteral2 = {
+    raza: "perro",
+    numPatas: 4,
+    tipoDieta: "carnívoro",
+    comportamiento: {
+        comportamientoAnimales: "miedoso",
+        comportamientoPersonas: "miedoso"
+    }
+}
+
+console.log("Ejemplo de objeto literal: ");
+console.log(perroLiteral.raza);
+console.log(perroLiteral.comportamiento.comportamientoAnimales);
+
