@@ -11,7 +11,23 @@ function saludarConEdad(nombre, edad, callback){
     callback(nombreConEdad);
 }
 
+function delay(ms) {
+    const date = Date.now();
+    let currentDate = null;
+ 
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < ms);
+}
+
 saludarConEdad('Alfredo', 24, saludar);
 saludarConEdad('Alfredo', 24, saludoAlien);
 
+
+console.log("Esperando a ser saludado");
+setTimeout(function saludar(){
+    console.log("Hola");
+}, 2000);
+delay(3000);
+console.log("Ya fui saludado");
 
