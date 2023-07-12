@@ -17,7 +17,29 @@ class Persona {
     }
 }
 
-const objectSenseis = senseis.map(({nombre, edad}) => new Persona(nombre, edad));
+const gato = { nombre: "Rayas", edad:16, noPatas:4, noVidas:2 };
+/* const noPatas = gato.noPatas;
+const noVidas = gato.noVidas; */
+
+const { noPatas, noVidas } = gato;
+
+const objectSenseisL = senseis.map(({nombre, edad}) => new Persona(nombre, edad));
+
+const objectSenseis = senseis.map(({nombre, edad}) => {
+    const persona = new Persona(nombre, edad);
+    return persona;
+});
+
+function map(callback, arreglo){
+    const arregloREsultado = [];
+    for (const elemento in arreglo) {
+        const resultadoCallback = callback(elemento);
+        // (elemento) => newPersona();
+        arregloREsultado.push(resultadoCallback);
+    }
+    return arregloREsultado;
+}
+
 const objectSenseis1 = senseis.map((e) => new Persona( e.nombre, e.edad, e.noID));
 
 console.log(objectSenseis);
