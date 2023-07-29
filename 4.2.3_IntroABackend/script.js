@@ -47,6 +47,49 @@ app.get('/alumnos/:idAlumno', (req, res) => {
     });
 });
 
+app.post('/alumnos', (req, res) => {
+    const body = req.body;
+    if(!('id' in body)){
+        res.status(400);
+        res.send({
+            mensaje: 'La información no contiene el id.'
+        });
+    }
+
+    if(typeof(body.id) != 'number'){
+        res.status(400);
+        res.send({
+            mensaje: 'El tipo de dato del id es incorrecto.'
+        });
+    }
+
+    if(!(body.hasOwnProperty('nombre'))){
+        res.status(400);
+        res.send({
+            mensaje: 'La información no contiene el nombre.'
+        });
+    }
+
+    if(!(body.hasOwnProperty('apellido'))){
+        res.status(400);
+        res.send({
+            mensaje: 'La información no contiene el apellido.'
+        });
+    }
+
+    alumnos.push({
+        id: body.id,
+        nombre: body.nombre,
+        apellido: body.apellido
+    });
+
+    res.status(201);
+    res.send({
+        mensaje: 'Alumno creado'
+    });
+
+});
+
 app.get('/', (req, res) => {
     res.send('¡Hola mundo!');
 });
