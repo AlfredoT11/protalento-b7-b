@@ -10,6 +10,43 @@ app.use(express.json());
 // U -> Update -> HTTP PUT / HTTP PATCH
 // D -> Delete -> HTTP DELETE
 
+const alumnos = [
+    {
+        id: 1,
+        nombre: 'Héctor',
+        apellido: 'Robayo',
+    },
+    {
+        id: 2,
+        nombre: '   Marco',
+        apellido: 'Quijano',
+    },
+    {
+        id: 3,
+        nombre: 'David',
+        apellido: 'Ballesteros',
+    }
+]
+
+app.get('/alumnos', (req, res) => {
+    res.status(200);
+    res.send(alumnos);
+});
+
+app.get('/alumnos/:idAlumno', (req, res) => {
+    const id = req.params.idAlumno;
+    for(let i = 0; i < alumnos.length; i++){
+        if(alumnos[i].id == id){
+            res.status(200);
+            res.send(alumnos[i]);
+        }
+    }
+    res.status(404);
+    res.send({
+        mensaje: 'Alumno no encontrado'
+    });
+});
+
 app.get('/', (req, res) => {
     res.send('¡Hola mundo!');
 });
