@@ -138,3 +138,76 @@ Promise.race([promesa1s, promesa2s, promesa5s]).then((valorPrimerPromesa) => {
     console.log("Ninguna promesa se cumplió. );");
 });
 
+//Paso 1. Preparar ingredientes -> 2 segundos
+//Paso 2. Mezclar ingredientes  -> 3 segundos
+//Paso 3. Precalentar horno     -> 5 segundos
+//Paso 4. Hornear pastel        -> 4 segundos
+
+// Pastel síncrono
+/*
+let prepararIngredientes = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log('Ingredientes listos');
+        resolve(true);
+    } ,2000);
+});
+
+prepararIngredientes.then((value) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Ingredientes mezclados');
+            resolve(true);
+        }, 3000);
+    });
+}).then((value) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Horno precalentado');
+            resolve(true);
+        }, 5000);
+    });
+}).then((value) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Pastel horneado');
+            resolve(true);
+        }, 4000);
+    });
+}).catch((error) => {
+    console.log('Algo falló con el pastel :(');
+});
+*/
+
+//Pastel asíncrono
+let prepararIngredientesAsincrono = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log('Ingredientes listos');
+        resolve(true);
+    } ,2000);
+});
+
+prepararIngredientesAsincrono.then((value) => {
+    let ingredientesMezclados = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Ingredientes mezclados');
+            resolve(true);
+        }, 3000);
+    });
+
+    let hornoPrecalentado = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Horno precalentado');
+            resolve(true);
+        }, 5000);
+    });
+    return Promise.all([ingredientesMezclados, hornoPrecalentado]);
+}).then((value) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Pastel horneado');
+            resolve(true);
+        }, 4000);
+    });
+}).catch((error) => {
+    console.log('Algo falló con el pastel :(');
+});

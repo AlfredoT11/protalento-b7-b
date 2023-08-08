@@ -1,0 +1,19 @@
+.general{
+    color: red;
+}
+
+.prueba{
+    color: blue;
+}
+
+p{
+    color: green;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li::before{
+    content: "✅";
+}
