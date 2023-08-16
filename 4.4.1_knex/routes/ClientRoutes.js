@@ -1,9 +1,9 @@
 const express = require('express');
 
 const router = express.Router();
-
+const { ClientController } = require('../controllers');
 // crear
-router.post('/', (req, res) => res.send({ message: "Se creó"}));
+router.post('/', ClientController.createClient);
 
 // leer
 router.get('/', (req, res) => res.send({ message: "Se leen todos"}));
