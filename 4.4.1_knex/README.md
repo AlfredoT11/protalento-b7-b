@@ -171,3 +171,21 @@ La ejecución de ese comando me permitirá crear un archivo con dos funciones:
                     - `npm run nombreDelScript` => `npm run knex_latest`.
     
     
+# Implementar el backend para nuestro sistema.
+
+1. Crear el servidor (API REST).
+    0. Inicializar el proyecto `npm init -y`
+    1. Instalar e instanciar express.
+        1. `npm i express`
+        2. Dentro del archivo principal del proyecto. (server.js)
+        ```
+        const express = require('express');
+
+        const server = express();
+
+        const port = 3000;
+
+        server.listen(port, () => {
+            console.log(`La API se encuentra escuchando en el puerto ${port}`)
+        });
+        ```
