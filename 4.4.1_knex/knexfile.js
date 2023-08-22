@@ -11,7 +11,7 @@ module.exports = {
       host: '127.0.0.1',
       database: 'sales',
       user: 'postgres',
-      password: 'root'
+      password: 'adminadmin'
     },
     pool: {
       min: 2,
