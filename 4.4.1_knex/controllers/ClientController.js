@@ -20,7 +20,18 @@ const getAllClients = (req, res) => {
     });
 }
 
+const getOneClient = (req, res) => {
+    ClientModel.getOneClient(req.params.id)
+    .then((data) => {
+        return res.status(200).send({ message: data })
+    })
+    .catch((error) => {
+        return res.status(500).send({ message: error })
+    })
+}
+
 module.exports = {
     createClient,
-    getAllClients
+    getAllClients,
+    getOneClient
 };

@@ -7,7 +7,7 @@ router.post('/', ClientController.createClient);
 
 // leer
 router.get('/', ClientController.getAllClients);
-router.get('/:id', (req, res) => res.send({ message: "Se leen uno"}))
+router.get('/:id', ClientController.getOneClient);
 
 // actualizar
 router.put('/:id', (req, res) => res.send({ message: "Se sustituyó"}));

@@ -11,7 +11,12 @@ const getClients = () => {
     return database.select('*').from('cliente');
 }
 
+const getOneClient = (id) => {
+    return database.select('*').from('cliente').where('dni', id);
+}
+
 module.exports = {
     createClient,
-    getClients
+    getClients,
+    getOneClient
 }
