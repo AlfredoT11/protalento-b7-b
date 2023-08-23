@@ -10,6 +10,17 @@ const createClient = (req, res) => {
     });
 };
 
+const getAllClients = (req, res) => {
+    ClientModel.getClients()
+    .then((data) => {
+        return res.status(200).send({ message: data })
+    })
+    .catch((error) => {
+        return res.status(500).send({ message: error })
+    });
+}
+
 module.exports = {
     createClient,
+    getAllClients
 };

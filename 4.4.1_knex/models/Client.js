@@ -7,6 +7,11 @@ const createClient = (client) => {
     .insert(client);
 };
 
+const getClients = () => {
+    return database.select('*').from('cliente');
+}
+
 module.exports = {
     createClient,
+    getClients
 }
