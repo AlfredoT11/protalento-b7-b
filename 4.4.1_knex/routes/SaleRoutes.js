@@ -1,13 +1,14 @@
 const express = require('express');
+const { SaleController } = require('../controllers')
 
 const router = express.Router();
 
 // crear
-router.post('/', (req, res) => res.send({ message: "Se creó"}));
+router.post('/', SaleController.createSale);
 
 // leer
 router.get('/', (req, res) => res.send({ message: "Se leen todos"}));
-router.get('/:id', (req, res) => res.send({ message: "Se leen uno"}))
+router.get('/:id', SaleController.getDetailedSale);
 
 // actualizar
 router.put('/:id', (req, res) => res.send({ message: "Se sustituyó"}));
