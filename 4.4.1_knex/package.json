@@ -5,7 +5,8 @@
     "knex": "knex init",
     "knex_migrations": "knex migrate:make cliente && knex migrate:make producto && knex migrate:make venta && knex migrate:make venta_producto",
     "knex_latest": "knex migrate:latest",
-    "knex_migration_update_client": "knex migrate:make cliente"
+    "knex_migration_update_client": "knex migrate:make cliente",
+    "knex_migration_update_venta_producto": "knex migrate:make venta_producto"
   },
   "name": "4.4.1_knex",
   "description": "Knex.js es un constructor de **consultas SQL** para JavaScript, es una abstracción delgada en la parte superior del controlador. Se utiliza en las bases de datos relacionales(PG, MYSQL, SQL).",
