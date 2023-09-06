@@ -5,7 +5,7 @@ const server = express();
 const PORT = 3000;
 
 const routes = require('./routes');
-const URI_MONGO = 'mongodb+srv://malinalibb98:<password>@cluster0.tsrujhv.mongodb.net/?retryWrites=true&w=majority';
+const URI_MONGO = 'mongodb+srv://malinalibb98:@cluster0.tsrujhv.mongodb.net/?retryWrites=true&w=majority';
 
 server.use('/api/v1', routes);
 
