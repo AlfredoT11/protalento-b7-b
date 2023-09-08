@@ -15,10 +15,12 @@ const {
 // Obtener todas las tareas
 router.get('/', getAllTasks);
 
-// Obtener una tarea
-router.get('/:id', getOneTaskById);
 // Buscar tareas
 router.get('/search', searchTasks);
+
+// Obtener una tarea
+router.get('/:id', getOneTaskById);
+
 
 //Agregar una tarea  createTask
 router.post('/', addTask);
