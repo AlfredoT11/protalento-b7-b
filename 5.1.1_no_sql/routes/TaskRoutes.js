@@ -1,4 +1,5 @@
 const express = require('express');
+const validateJWT = require('../utils/validate');
 
 const router = express.Router();
 
@@ -16,14 +17,14 @@ const {
 router.get('/', getAllTasks);
 
 // Buscar tareas
-router.get('/search', searchTasks);
+router.get('/search', validateJWT, searchTasks);
 
 // Obtener una tarea
 router.get('/:id', getOneTaskById);
 
 
 //Agregar una tarea  createTask
-router.post('/', addTask);
+router.post('/', validateJWT, addTask);
 
 // Actualizar todo el objeto put ~~
 // Actualizar una propiedad del objeto

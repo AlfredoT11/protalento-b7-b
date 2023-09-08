@@ -1,10 +1,12 @@
+require('dotenv').config();
+
 const {
     createUser,
     findUser
 } = require('../services/UserService');
 
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = 'mi_clave_super_cool';
+const SECRET_KEY = process.env.SECRET_KEY;
 
 module.exports = {
     addUser: (req, res) => {
@@ -20,12 +22,6 @@ module.exports = {
     },
 
     authUser: (req, res) => {
-        /*
-        {
-            "email": "Pepito",
-            "password": "gatitos59"
-        }
-        */
         const { email, password } = req.body;
         findUser({email, password})
         .then((user) => {

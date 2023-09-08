@@ -1,11 +1,14 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const server = express();
 
+
 const PORT = 3000;
 
 const routes = require('./routes');
-const URI_MONGO = 'mongodb+srv://malinalibb98:@cluster0.tsrujhv.mongodb.net/myTasks?retryWrites=true&w=majority';
+const URI_MONGO = process.env.MONGO_URI;
+
 
 server.use(express.json());
 server.use('/api/v1', routes);
