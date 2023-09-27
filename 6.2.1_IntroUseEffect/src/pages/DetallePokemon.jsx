@@ -7,11 +7,6 @@ import '../style.css';
 const DetallePokemon = () => {
 
     const {id} = useParams();
-
-    const [nombre, setNombre] = useState('');
-    const [habilidad, setHabilidad] = useState('');
-    const [altura, setAltura] = useState('');
-    const [stats, setStats] = useState([]);
     const [detallesPokemon, setDetallesPokemon] = useState({});
 
     useEffect(() => {
@@ -19,10 +14,6 @@ const DetallePokemon = () => {
         .then(response => response.json())
         .then(jsonData => {
             console.log(jsonData);
-            setNombre(jsonData.name);
-            setAltura(jsonData.height);
-            setHabilidad(jsonData.abilities[0].ability.name);
-            setStats(jsonData.stats);
             setDetallesPokemon(jsonData);
         })
         .catch(error => console.log('Ocurrió un error en la consulta'));

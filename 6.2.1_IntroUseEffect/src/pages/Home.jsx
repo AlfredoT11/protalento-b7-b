@@ -5,7 +5,6 @@ const Home = () => {
   const [pokemones, setPokemones] = useState([]);
   const [limite, setLimite] = useState(20);
   const [filtroNombre, setFiltroNombre] = useState('');
-  const [pokemonSeleccionado, setPokemonSeleccionado] = useState(0);
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/?&limit=${limite}`)
@@ -29,13 +28,9 @@ const Home = () => {
     setFiltroNombre(event.target.value);
   }
 
-  const seleccionarPokemon = (idPokemon) => {
-    setPokemonSeleccionado(idPokemon);
-  }
-
   const pokemonesFiltrados = pokemones.filter(pokemon => {
     return pokemon.name.toLowerCase().includes(filtroNombre.toLocaleLowerCase());
-  })
+  });
 
   return (
     <div className='container'>
@@ -44,8 +39,8 @@ const Home = () => {
       <p><Link to={'/pokemon/2'}>Detalle Pokémon </Link></p>
 
       <h1>Pokedex</h1>
-      <div className='row'>
-        <div className='col-6'>
+      <div className='row col-10'>
+        <div className='col-5'>
           <label>Límite de Pokemones: </label>
           <input
             value={limite}
@@ -53,7 +48,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="col-6">
+        <div className="col-5">
           <label>Búsqueda por nombre: </label>
           <input
             value={filtroNombre}
@@ -86,8 +81,6 @@ const Home = () => {
           })
         }
       </div>
-
-      { /*<DetallePokemon urlPokemon={pokemonSeleccionado}/> */}
     </div>
 
   )
