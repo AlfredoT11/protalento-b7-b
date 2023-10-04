@@ -7,12 +7,7 @@ module.exports = {
 
   development: {
     client: 'postgresql',
-    connection: {
-      host: '127.0.0.1',
-      database: 'sales',
-      user: 'postgres',
-      password: 'adminadmin'
-    },
+    connection: 'postgres://postgres1:YL0BL3wpKxqf69RPSgfxH26Xao4yrDxi@dpg-ckecmndtj22c73d43eg0-a.oregon-postgres.render.com/sales_vbbo?ssl=true',
     pool: {
       min: 2,
       max: 10
